@@ -1,0 +1,124 @@
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main container with blur and smaller size */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    max-width: 480px; /* 40% smaller than the previous width */
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Larger box shadow for the container */
+    backdrop-filter: blur(8px); /* Adds a 50% blur effect */
+    transform: scale(0.9); /* Reduce container size by 10% */
+    transition: transform 0.3s ease;
+}
+
+/* On hover, scale back up slightly */
+.container:hover {
+    transform: scale(0.95);
+}
+
+/* Header */
+h1, h2 {
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Forms */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+/* Button styling with adaptive width */
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Allows button width to adapt to text length */
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Separate buttons with a gap */
+.button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+/* Transaction table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Chart wrapper */
+.chart-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.chart-container {
+    width: 90%;
+}
+
+/* Budget status */
+.budget-status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.budget-status.over-budget {
+    color: red;
+}
+
+.budget-status.saving {
+    color: rgb(31, 119, 31);
+}

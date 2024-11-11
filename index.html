@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Project: OTP-Based Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div id="hamburgerMenuBtn" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Sidebar (Hamburger Menu) -->
+    <div id="sidebar">
+        <div class="sidebar-content">
+            <h3>Dashboard</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <footer>
+                <p>&copy; 2024 My Website</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Start Now Button -->
+    <div id="startNowBtnContainer">
+        <button id="startNowBtn" onclick="toggleSidebar()">Start Now</button>
+    </div>
+
+    <!-- Main Form Container -->
+    <div class="scroll-container" id="formContainer" style="display: none;">
+        <div class="container">
+            <div class="form-container">
+                <!-- Tabs for Login and Sign Up -->
+                <div class="tabs">
+                    <button class="tab active" onclick="showLogin()">Login</button>
+                    <button class="tab" onclick="showSignUp()">Sign Up</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="form active" onsubmit="login(event)">
+                    <h2>Login</h2>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+
+                <!-- Sign Up Form with OTP (not changed) -->
+                <form id="signUpForm" class="form">
+                    <h2>Sign Up</h2>
+                    <label for="new-email">Email</label>
+                    <input type="email" id="new-email" name="email" required placeholder="Enter your email">
+
+                    <label for="new-password">Password</label>
+                    <input type="password" id="new-password" name="password" required placeholder="Create a password">
+
+                    <!-- OTP Section with Get OTP button -->
+                    <div class="otp-section">
+                        <label for="otp">OTP</label>
+                        <div class="otp-input-wrapper">
+                            <input type="text" id="otp_inp" name="otp" placeholder="Enter OTP" maxlength="6">
+                            <button type="button" class="get-otp-btn" onclick="sendOTP()">Get OTP</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="otp-btn" onclick="verifyOTP()">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

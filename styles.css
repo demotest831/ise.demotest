@@ -1,0 +1,244 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    animation: scrollPage 3s ease-out forwards;
+}
+
+@keyframes scrollPage {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hamburger Menu Button */
+#hamburgerMenuBtn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    color: #333;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 100;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+.sidebar-content {
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+#sidebar h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin: 1rem 0;
+}
+
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#sidebar footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Start Now Button */
+#startNowBtnContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#startNowBtn {
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#startNowBtn:hover {
+    background-color: #555;
+}
+
+/* Main Form Container Styling */
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    font-weight: bold;
+    color: #333;
+    border-radius: 4px;
+}
+
+.tab.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Form Styles */
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+label {
+    margin-top: 1rem;
+    display: block;
+    color: #555;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* OTP Section Styling */
+.otp-section {
+    margin-top: 1rem;
+}
+
+.otp-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.otp-input-wrapper input {
+    flex: 1;
+}
+
+.get-otp-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.get-otp-btn:hover {
+    background-color: #555;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
